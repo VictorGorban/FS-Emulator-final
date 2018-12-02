@@ -65,12 +65,15 @@ namespace FS_Emulator
 				//["changeuserlogin"] = new KeyValuePair<int, Func<string[], string[]>>(3, WorkWithFS.ChangeUserLogin),
 				///**/
 				//["changeuserpassword"] = new KeyValuePair<int, Func<string[], string[]>>(3, WorkWithFS.ChangeUserPassword),
+				/**/
 				["move"] = new KeyValuePair<int, Func<string[], string[]>>(2, WorkWithFS.Move),
 				/**/
 				["rmfile"] = new KeyValuePair<int, Func<string[], string[]>>(1, WorkWithFS.RemoveFile),
 				/**/
 				["rmdir"] = new KeyValuePair<int, Func<string[], string[]>>(1, WorkWithFS.RemoveDir),
+				/**/
 				["rmuser"] = new KeyValuePair<int, Func<string[], string[]>>(1, WorkWithFS.RemoveUser),
+				["help"] = new KeyValuePair<int, Func<string[], string[]>>(1, WorkWithFS.ViewHelp),
 
 
 			};
@@ -809,6 +812,14 @@ namespace FS_Emulator
 
 				res[0] = "Готово";
 				return res;
+			}
+
+			internal static string[] ViewHelp(string[] arg)
+			{
+				MessageBox.Show("Помощь из браузера уже в пути. Подождите немного.");
+				System.Diagnostics.Process.Start("HELP.htm");
+
+				return new string[] { "Готово" };
 			}
 		}
 

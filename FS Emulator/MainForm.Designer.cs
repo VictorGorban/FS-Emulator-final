@@ -92,7 +92,7 @@
 			this.outputTB.Multiline = true;
 			this.outputTB.Name = "outputTB";
 			this.outputTB.ReadOnly = true;
-			this.outputTB.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+			this.outputTB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.outputTB.Size = new System.Drawing.Size(796, 411);
 			this.outputTB.TabIndex = 1;
 			this.outputTB.TabStop = false;
@@ -106,7 +106,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.inputTB.BackColor = System.Drawing.Color.Black;
 			this.inputTB.Font = new System.Drawing.Font("Lucida Console", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.inputTB.ForeColor = System.Drawing.Color.Green;
+			this.inputTB.ForeColor = System.Drawing.Color.LimeGreen;
 			this.inputTB.Location = new System.Drawing.Point(2, 434);
 			this.inputTB.Name = "inputTB";
 			this.inputTB.Size = new System.Drawing.Size(796, 21);
