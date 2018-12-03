@@ -34,9 +34,9 @@
 			// 
 			// btSave
 			// 
-			this.btSave.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+			this.btSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.btSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.btSave.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.btSave.Location = new System.Drawing.Point(314, 261);
 			this.btSave.Name = "btSave";

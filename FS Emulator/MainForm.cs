@@ -73,7 +73,8 @@ namespace FS_Emulator
 				["rmdir"] = new KeyValuePair<int, Func<string[], string[]>>(1, WorkWithFS.RemoveDir),
 				/**/
 				["rmuser"] = new KeyValuePair<int, Func<string[], string[]>>(1, WorkWithFS.RemoveUser),
-				["help"] = new KeyValuePair<int, Func<string[], string[]>>(1, WorkWithFS.ViewHelp),
+				/**/
+				["help"] = new KeyValuePair<int, Func<string[], string[]>>(0, WorkWithFS.ViewHelp),
 
 
 			};
@@ -816,11 +817,12 @@ namespace FS_Emulator
 
 			internal static string[] ViewHelp(string[] arg)
 			{
-				MessageBox.Show("Помощь из браузера уже в пути. Подождите немного.");
 				System.Diagnostics.Process.Start("HELP.htm");
+				MessageBox.Show("Помощь из браузера уже в пути. Подождите немного.");
 
 				return new string[] { "Готово" };
 			}
+
 		}
 
 		private void inputTB_KeyDown(object sender, KeyEventArgs e)
@@ -835,7 +837,7 @@ namespace FS_Emulator
 				if (buffer.Count == 0 || buffer.Last() != tbox.Text)
 				{
 					buffer.Add(tbox.Text);
-					bufIndex = buffer.Count - 1;
+					bufIndex = buffer.Count;
 				}
 
 				tbox.Clear();
